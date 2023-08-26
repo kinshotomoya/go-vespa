@@ -1,13 +1,15 @@
 package search
 
-import "github.com/kinshotomoya/go-vespa"
+import (
+	"github.com/kinshotomoya/go-vespa/typedclient"
+)
 
 type Search struct {
-	transport *vespa.TypedClient
+	transport typedclient.ClientInterface
 	req       *Request
 }
 
-func New(t *vespa.TypedClient) *Search {
+func New(t typedclient.ClientInterface) *Search {
 	return &Search{
 		transport: t,
 	}

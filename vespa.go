@@ -7,14 +7,16 @@ import (
 	"time"
 )
 
-// TODO: interface定義する
 type TypedClient struct {
 	BaseClient
 	*typedapi.Api
 }
 
+func (client *TypedClient) Inform() {
+}
+
 func NewTypedClient(conf *Config) (*TypedClient, error) {
-	if conf != nil {
+	if conf == nil {
 		return nil, errors.New("conf is required")
 	}
 	httpClient, err := NewHttpClient(conf)

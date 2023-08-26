@@ -15,3 +15,8 @@ v0.1.0 -> v0.2.0
 
 ## 参考
 https://www.twihike.dev/docs/golang-primer/publishing-modules
+
+
+```shell
+$ go test ./... -v
+```
